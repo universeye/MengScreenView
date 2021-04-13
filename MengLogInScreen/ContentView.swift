@@ -6,41 +6,104 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 struct ContentView: View {
+    
+    @State var email = ""
+    @State var password = ""
+    @State private var rect: CGRect = CGRect()
+    
+    
+    var background = LinearGradient(gradient: Gradient(stops: [
+                                                        .init(color: Color(#colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)), location: 0),
+                                                        .init(color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)), location: 1)]), startPoint: UnitPoint(x: 0.5, y: -3.061671314629196e-17), endPoint: UnitPoint(x: 0.5, y: 0.999999999999))
+    
+    var buttonTextColor = RadialGradient(
+        gradient: Gradient(stops: [
+                            .init(color: Color(#colorLiteral(red: 0.5313332080841064, green: 0.36666667461395264, blue: 1, alpha: 0.8100000023841858)), location: 0),
+                            .init(color: Color(#colorLiteral(red: 0.8950619101524353, green: 0.3016319274902344, blue: 0.9916666746139526, alpha: 0.699999988079071)), location: 1),
+                            .init(color: Color(#colorLiteral(red: 1, green: 0.3708333373069763, blue: 0.9370830655097961, alpha: 0.7599999904632568)), location: 1)]),
+        center: UnitPoint(x: -5.371759925765218e-9, y: 0.5000000000000001),
+        startRadius: 2.046781974837972,
+        endRadius: 200
+    )
+    
     var body: some View {
-        VStack {
-            MyCustomShape()
-                .fill(AngularGradient(
-                    gradient: Gradient(stops: [
-                .init(color: Color(#colorLiteral(red: 0, green: 0.7911666631698608, blue: 0.8416666388511658, alpha: 0.3799999952316284)), location: 0.17238876223564148),
-                .init(color: Color(#colorLiteral(red: 0.9601541757583618, green: 0.9708333611488342, blue: 0.43687498569488525, alpha: 0.7200000286102295)), location: 0.328125),
-                .init(color: Color(#colorLiteral(red: 0.7692121267318726, green: 0.42349088191986084, blue: 0.10436362028121948, alpha: 0.6600000262260437)), location: 0.528412401676178),
-                .init(color: Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 0.6200000047683716)), location: 0.7730047106742859),
-                .init(color: Color(#colorLiteral(red: 0.5226666331291199, green: 0, blue: 0.9333333373069763, alpha: 1)), location: 0.9166666865348816)]),
-                    center: UnitPoint(x: 0.5, y: 0.49999999999999994)
-                  ))
-                .frame(width: 300, height: 300, alignment: .center)
-            Text("Hello, world!")
+        ZStack {
+            background.ignoresSafeArea()
+            ZStack {
+                
+                //Text("some text").background(GeometryGetter(rect: $rect))
+                // You can then use rect in other places of your view:
+                //Rectangle().frame(width: 100, height: rect.height)
+                
+                EggView().offset(x: -80, y: -100)
+                
+                VStack (spacing: 20) {
+                    Text("Sign Up")
+                        .font(.largeTitle).bold()
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("Access to 120+ hours of courses, tutorials and livestreams")
+                        .font(.subheadline)
+                        .foregroundColor(Color.white.opacity(0.8))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    TextField("Email", text: $email)
+                        .foregroundColor(.white)
+                        .padding(12) //padding before backGround Color
+                        .background(Color(#colorLiteral(red: 0.1568627451, green: 0.09411764706, blue: 0.3529411765, alpha: 1)).opacity(0.8))
+                        
+                        .mask(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Color.white.opacity(0.2)))
+                    SecureField("Password", text: $password)
+                        .foregroundColor(.white)
+                        .padding(12) //padding before backGround Color
+                        .background(Color(#colorLiteral(red: 0.1568627451, green: 0.09411764706, blue: 0.3529411765, alpha: 1)).opacity(0.8))
+                        
+                        .mask(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Color.white.opacity(0.2)))
+                    
+                    Button(action: {}) {
+                        Text("Create account")
+                            .frame(maxWidth: .infinity)
+                            .padding(12)
+                            .foregroundColor(.white)
+                            .background(Color(#colorLiteral(red: 0.1568627451, green: 0.09411764706, blue: 0.3529411765, alpha: 1)).opacity(0.8))
+                            .mask(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Color.white.opacity(0.2)))
+                           
+                    }
+                    .background(buttonTextColor.blur(radius: 30))
+                    
+                    Text("By clicking on Sign up, you agree to our Terms of service and Privacyt policy")
+                        .font(.subheadline)
+                        .foregroundColor(Color.white.opacity(0.8))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Divider().background(Color(#colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)).opacity(0.4))
+                    
+                    Text("Already have an account?")
+                        .font(.subheadline)
+                        .foregroundColor(Color.white.opacity(0.8))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                
+                .padding(20)
+                //                .background(Color(#colorLiteral(red: 0.1568627451, green: 0.09411764706, blue: 0.3529411765, alpha: 1)).opacity(0.5))
+                .background(VisualEffectBlurView(blurStyle: .systemUltraThinMaterialDark)) //play the canvas to see it
+                .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous).stroke(Color.white.opacity(0.4))
+                            .blendMode(.overlay)) //blendMode for outline only
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                //.cornerRadius(30 )
                 .padding()
+            }
         }
     }
 }
 
 
-struct MyCustomShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.size.width
-        let height = rect.size.height
-        path.move(to: CGPoint(x: 0.48416*width, y: 0.07692*height))
-        path.addCurve(to: CGPoint(x: 0.00452*width, y: 0.66272*height), control1: CGPoint(x: 0.36501*width, y: 0.12821*height), control2: CGPoint(x: 0.00452*width, y: 0.34911*height))
-        path.addCurve(to: CGPoint(x: 0.95023*width, y: 0.51479*height), control1: CGPoint(x: 0.00452*width, y: 1.12426*height), control2: CGPoint(x: 0.76199*width, y: 1.13018*height))
-        path.addCurve(to: CGPoint(x: 0.48416*width, y: 0.07692*height), control1: CGPoint(x: 1.13846*width, y: -0.10059*height), control2: CGPoint(x: 0.71795*width, y: -0.03353*height))
-        path.closeSubpath()
-        return path
-    }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		BFB0A686262085AF00F3889A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB0A684262085AF00F3889A /* LaunchScreen.storyboard */; };
 		BFB0A691262085AF00F3889A /* MengLogInScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0A690262085AF00F3889A /* MengLogInScreenTests.swift */; };
 		BFB0A69C262085AF00F3889A /* MengLogInScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0A69B262085AF00F3889A /* MengLogInScreenUITests.swift */; };
+		BFB0A6B52621856A00F3889A /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0A6B42621856A00F3889A /* EggView.swift */; };
+		BFD44F132624A8D10010E908 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD44F122624A8D10010E908 /* GeometryGetter.swift */; };
+		BFD44F19262562C10010E908 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = BFD44F18262562C10010E908 /* SwiftUIX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		BFB0A697262085AF00F3889A /* MengLogInScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MengLogInScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB0A69B262085AF00F3889A /* MengLogInScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MengLogInScreenUITests.swift; sourceTree = "<group>"; };
 		BFB0A69D262085AF00F3889A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB0A6B42621856A00F3889A /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
+		BFD44F122624A8D10010E908 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD44F19262562C10010E908 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,8 @@
 				BFB0A679262085AC00F3889A /* AppDelegate.swift */,
 				BFB0A67B262085AC00F3889A /* SceneDelegate.swift */,
 				BFB0A67D262085AC00F3889A /* ContentView.swift */,
+				BFB0A6B42621856A00F3889A /* EggView.swift */,
+				BFD44F122624A8D10010E908 /* GeometryGetter.swift */,
 				BFB0A67F262085AF00F3889A /* Assets.xcassets */,
 				BFB0A684262085AF00F3889A /* LaunchScreen.storyboard */,
 				BFB0A687262085AF00F3889A /* Info.plist */,
@@ -152,6 +160,9 @@
 			dependencies = (
 			);
 			name = MengLogInScreen;
+			packageProductDependencies = (
+				BFD44F18262562C10010E908 /* SwiftUIX */,
+			);
 			productName = MengLogInScreen;
 			productReference = BFB0A676262085AC00F3889A /* MengLogInScreen.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +234,9 @@
 				Base,
 			);
 			mainGroup = BFB0A66D262085AC00F3889A;
+			packageReferences = (
+				BFD44F17262562C10010E908 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = BFB0A677262085AC00F3889A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,7 +282,9 @@
 			files = (
 				BFB0A67A262085AC00F3889A /* AppDelegate.swift in Sources */,
 				BFB0A67C262085AC00F3889A /* SceneDelegate.swift in Sources */,
+				BFB0A6B52621856A00F3889A /* EggView.swift in Sources */,
 				BFB0A67E262085AC00F3889A /* ContentView.swift in Sources */,
+				BFD44F132624A8D10010E908 /* GeometryGetter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFD44F17262562C10010E908 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFD44F18262562C10010E908 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFD44F17262562C10010E908 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFB0A66E262085AC00F3889A /* Project object */;
 }
