@@ -18,7 +18,7 @@ SwiftUI, a log in screen follow the livestream tutorial by [MengTo](https://twit
 # Features
 * Glowing Effect:
 
-<img src= "ReadmeSources/glowEffect.png" width = 50% height = 50%>
+<img src= "ReadmeSources/glowEffect.png" width = 80% height = 80%>
 
 * Launch Animation: 
 
@@ -30,11 +30,11 @@ SwiftUI, a log in screen follow the livestream tutorial by [MengTo](https://twit
 
 Before: 
 
-<img src= "ReadmeSources/textFieldBefore.png" width = 50% height = 50%>
+<img src= "ReadmeSources/textFieldBefore.png" width = 80% height = 80%>
 
 After:
 
-<img src= "ReadmeSources/textFieldAfter.png" width = 50% height = 50%>
+<img src= "ReadmeSources/textFieldAfter.png" width = 80% height = 80%>
 
 
 * SwiftUIX library for blur effect
