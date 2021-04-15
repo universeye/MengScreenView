@@ -1,5 +1,5 @@
 # SwiftUI Log In Screen
-SwiftUI, a log in screen follow the livestream tutorial by [MengTo](https://twitter.com/MengTo), with some extra features added myself like drag animation etc...
+SwiftUI, a log in screen and onBoard screen follow the livestream tutorial by [MengTo](https://twitter.com/MengTo), with some extra features added myself like drag animation etc...
 
 
 # Menu
@@ -14,6 +14,8 @@ SwiftUI, a log in screen follow the livestream tutorial by [MengTo](https://twit
 # Screenshots
 
 <img src= "ReadmeSources/MengLogInScreen2.png" width = 50% height = 50%>
+
+<img src= "ReadmeSources/onboardscreenshot.png" width = 50% height = 50%>
 
 # Features
 * Glowing Effect:
@@ -38,6 +40,7 @@ After:
 
 
 * SwiftUIX library for blur effect
+* TabView tagging
 
 
 
@@ -45,10 +48,11 @@ After:
 
 ### To-Do
 * Drag The Card Animation(Done)
+* Button on onBoard screen
 
 
 # Source
-This log in screen follow the livestream tutorial by [MengTo](https://twitter.com/MengTo)
+This screen follow the livestream tutorial by [MengTo](https://twitter.com/MengTo), developed all by SwiftUI.
 
 
 # Contributions
