@@ -48,6 +48,7 @@ After:
 
 ### To-Do
 * Drag The Card Animation(Done)
+* Button on onBoard screen
 
 
 # Source
