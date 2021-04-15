@@ -16,6 +16,7 @@ struct OnBoardView: View {
             Constant.onBoardBackGround.ignoresSafeArea()
             EggView()
                 .offset(x: -90, y: 380)
+                .hueRotation(Angle(degrees: hueFunc()))
             Image("—Pngtree—transparent bubble glass ball_5422539拷貝")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -25,23 +26,41 @@ struct OnBoardView: View {
                 OnBoardCardView().tag(0) //first page
                 OnBoardCardView().tag(1) //second page
                 OnBoardCardView().tag(2) //third page
-                
             }
             .tabViewStyle(PageTabViewStyle())
             
             VStack {
-                if tagNumber == 0 {
-                    SocialView(socialMedia: "youtube")
-                } else if tagNumber  == 1 {
-                    SocialView(socialMedia: "instagram")
-                } else {
-                    SocialView(socialMedia: "twitter")
-                }
+                SocialView(socialMedia: socialFunc())
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
+    
+    func hueFunc() -> Int {
+        withAnimation {
+            if tagNumber == 0 {
+                return 80
+            } else if tagNumber == 1{
+                return 150
+            } else {
+                return 230
+            }
+        }
+    }
+    
+    func socialFunc() -> String {
+        withAnimation(.linear(duration: 0.8)) {
+            if tagNumber == 0 {
+                return "youtube"
+            } else if tagNumber == 1 {
+                return "instagram"
+            } else {
+                return "twitter"
+            }
+        }
+    }
+    
 }
 
 struct OnBoardView_Previews: PreviewProvider {

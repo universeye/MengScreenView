@@ -32,6 +32,7 @@ struct EggView: View {
                     ))
                     .frame(width: 140, height: 140, alignment: .center)
                     .blur(radius: 30))
+            .animation(.spring())
     }
     
     

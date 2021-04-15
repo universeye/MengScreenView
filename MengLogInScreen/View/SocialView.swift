@@ -19,10 +19,11 @@ struct SocialView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(Color.white.opacity(0.5))
                 .frame(width: 80)
-                .animation(.spring())
+                
         }
         .padding()
         .frame(maxWidth: .infinity)
+        .animation(.spring())
     }
 }
 
