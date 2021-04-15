@@ -16,13 +16,35 @@ struct OnBoardView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
-            TabView {
-                OnBoardCardView()
-                OnBoardCardView()
-            }
-            .tabViewStyle(PageTabViewStyle())
-        }
             
+            
+            TabView {
+                Group {
+                    OnBoardCardView()
+                    OnBoardCardView()
+                        
+                }
+                .offset(y: 40)
+                
+            }
+            .offset(y: -40)
+            .tabViewStyle(PageTabViewStyle())
+            
+            VStack {
+                HStack {
+                    Image("aquarelle-bubble-gradient-instagram-liquid-pink-watercolour-liquid-bubble-png-512_512")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 80)
+                    Spacer()
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
     }
 }
 

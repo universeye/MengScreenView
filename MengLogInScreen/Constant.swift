@@ -59,4 +59,26 @@ struct Constant {
                                                                     0.4999999443689973, y:
                                                                         0.9363635917143408))
     
+    
+    static var onBoardGradientOpposite = LinearGradient(
+        gradient: Gradient(stops: [
+                            .init(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)), location: 0),
+                            .init(color:Color(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)).opacity(0.7), location: 1)]),
+        startPoint: UnitPoint(x:
+                                0.49999988837676157, y:
+                                    2.9497591284275417e-15),
+        endPoint: UnitPoint(x:
+                                0.4999999443689973, y:
+                                    0.9363635917143408))
+    
+    
+    static var strokeGradientOpposite = LinearGradient(gradient: Gradient(stops: [
+                                                                    .init(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)), location: 0),
+                                                                    .init(color:Color(#colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)), location: 1)]), startPoint: UnitPoint(x: 0.49999988837676157, y:2.9497591284275417e-15),
+                                               endPoint: UnitPoint(x:
+                                                                    0.4999999443689973, y:
+                                                                        0.9363635917143408))
+    
+    
+    
 }
