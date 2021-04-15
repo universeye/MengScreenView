@@ -13,6 +13,7 @@
 		BF0C10072627C7C2009D6EB6 /* OnBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C10062627C7C2009D6EB6 /* OnBoardView.swift */; };
 		BF0C100C2627C81F009D6EB6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C100B2627C81F009D6EB6 /* Constant.swift */; };
 		BF0C10112627E677009D6EB6 /* OnBoardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C10102627E677009D6EB6 /* OnBoardCardView.swift */; };
+		BF0C101626286A0F009D6EB6 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C101526286A0F009D6EB6 /* SocialView.swift */; };
 		BFB0A67A262085AC00F3889A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0A679262085AC00F3889A /* AppDelegate.swift */; };
 		BFB0A67C262085AC00F3889A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0A67B262085AC00F3889A /* SceneDelegate.swift */; };
 		BFB0A67E262085AC00F3889A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0A67D262085AC00F3889A /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 		BF0C10062627C7C2009D6EB6 /* OnBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardView.swift; sourceTree = "<group>"; };
 		BF0C100B2627C81F009D6EB6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BF0C10102627E677009D6EB6 /* OnBoardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardCardView.swift; sourceTree = "<group>"; };
+		BF0C101526286A0F009D6EB6 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		BFB0A676262085AC00F3889A /* MengLogInScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MengLogInScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB0A679262085AC00F3889A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFB0A67B262085AC00F3889A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				BFB0A6B42621856A00F3889A /* EggView.swift */,
 				BF0C0FB826268F32009D6EB6 /* LogInCardView.swift */,
 				BF0C10062627C7C2009D6EB6 /* OnBoardView.swift */,
+				BF0C101526286A0F009D6EB6 /* SocialView.swift */,
 				BF0C10102627E677009D6EB6 /* OnBoardCardView.swift */,
 			);
 			path = View;
@@ -311,6 +314,7 @@
 				BFB0A67C262085AC00F3889A /* SceneDelegate.swift in Sources */,
 				BF0C0FB426268EFB009D6EB6 /* CustomTextField.swift in Sources */,
 				BF0C0FB926268F32009D6EB6 /* LogInCardView.swift in Sources */,
+				BF0C101626286A0F009D6EB6 /* SocialView.swift in Sources */,
 				BFB0A6B52621856A00F3889A /* EggView.swift in Sources */,
 				BF0C10112627E677009D6EB6 /* OnBoardCardView.swift in Sources */,
 				BFB0A67E262085AC00F3889A /* ContentView.swift in Sources */,

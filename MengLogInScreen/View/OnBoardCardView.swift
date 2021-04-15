@@ -25,6 +25,7 @@ struct OnBoardCardView: View {
                 Text("Learn by building real apps using Swift, React, Flutter and more. Design files and source code are included for each cource")
                     .font(.subheadline)
                     .foregroundColor(Color.white.opacity(0.8))
+                Spacer()
             }
             .frame(height: 500)
             .padding(30)
@@ -43,9 +44,7 @@ struct OnBoardCardView: View {
             .padding(20)
         }
         
-        //MARK: - Big Card outside
-        
-        
+        //MARK: - Big Card outsides
         .background(Constant.onBoardGradientOpposite)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous)

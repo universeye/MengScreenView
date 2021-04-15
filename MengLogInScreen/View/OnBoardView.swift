@@ -8,39 +8,35 @@
 import SwiftUI
 
 struct OnBoardView: View {
-
+    
+    @State var tagNumber = 0
+    
     var body: some View {
         ZStack {
             Constant.onBoardBackGround.ignoresSafeArea()
+            EggView()
+                .offset(x: -90, y: 380)
             Image("—Pngtree—transparent bubble glass ball_5422539拷貝")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .offset(y: -420)
             
-            
-            
-            TabView {
-                Group {
-                    OnBoardCardView()
-                    OnBoardCardView()
-                        
-                }
-                .offset(y: 40)
+            TabView(selection: $tagNumber) {
+                OnBoardCardView().tag(0) //first page
+                OnBoardCardView().tag(1) //second page
+                OnBoardCardView().tag(2) //third page
                 
             }
-            .offset(y: -40)
             .tabViewStyle(PageTabViewStyle())
             
             VStack {
-                HStack {
-                    Image("aquarelle-bubble-gradient-instagram-liquid-pink-watercolour-liquid-bubble-png-512_512")
-                        .renderingMode(.template)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 80)
-                    Spacer()
+                if tagNumber == 0 {
+                    SocialView(socialMedia: "youtube")
+                } else if tagNumber  == 1 {
+                    SocialView(socialMedia: "instagram")
+                } else {
+                    SocialView(socialMedia: "twitter")
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
