@@ -39,14 +39,6 @@ struct LogInCardView: View {
             
             CustomSecureField(placeholder2: Text("  Password").foregroundColor(.white), passwaord: $password)
             
-            TextField("Email", text: $email)
-                .foregroundColor(.white)
-                .padding(12) //padding before backGround Color
-                .background(Color(#colorLiteral(red: 0.1568627451, green: 0.09411764706, blue: 0.3529411765, alpha: 1)).opacity(0.8))
-            
-                .mask(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Color.white.opacity(0.2)))
-            
             Button(action: {}) {
                 Text("Create account")
                     .frame(maxWidth: .infinity)
