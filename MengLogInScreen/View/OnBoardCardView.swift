@@ -17,7 +17,7 @@ struct OnBoardCardView: View {
                     .foregroundColor(Color.white.opacity(0.8))
                 Constant.textGradient.frame(height: 140)
                     .mask(Text("Learn \ndesign \nand code")
-                           
+                            
                             .font(.largeTitle)
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading))
@@ -26,6 +26,17 @@ struct OnBoardCardView: View {
                     .font(.subheadline)
                     .foregroundColor(Color.white.opacity(0.8))
                 Spacer()
+                
+                Button(action: {}) {
+                    Constant.textGradient.frame(height: 100)
+                        .mask(Text("Get Started")
+                                .bold()
+                                .font(.system(size: 20))
+                                .padding(16)
+                                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous)
+                                            .stroke(Color.white, lineWidth: 1).blendMode(.colorDodge)))
+                }
             }
             .frame(height: 500)
             .padding(30)
