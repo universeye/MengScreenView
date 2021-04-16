@@ -15,7 +15,7 @@ SwiftUI, a log in screen and onBoard screen follow the livestream tutorial by [M
 
 <img src= "ReadmeSources/MengLogInScreen2.png" width = 50% height = 50%>
 
-<img src= "ReadmeSources/onboardscreenshot.png" width = 50% height = 50%>
+<img src= "ReadmeSources/onboardscreenshot2.png" width = 50% height = 50%>
 
 # Features
 * Glowing Effect:
@@ -48,7 +48,7 @@ After:
 
 ### To-Do
 * Drag The Card Animation(Done)
-* Button on onBoard screen
+* Button on onBoard screen(Done)
 
 
 # Source
