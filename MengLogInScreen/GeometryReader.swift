@@ -10,10 +10,10 @@ import SwiftUI
 struct OuterView: View {
     var body: some View {
         VStack {
-        Text("Top")
-        InnerView()
-            .background(Color.green)
-        Text("Bottom")
+            Text("Top")
+            InnerView()
+                .background(Color.green)
+            Text("Bottom")
         }
     }
 }
@@ -43,12 +43,12 @@ struct GeometryReader2: View {
         OuterView()
             .background(Color.red)
             .coordinateSpace(name: "Custom")
-//        GeometryReader(alignment: .center) { geo in
-//            Text("width: \(geo.size.width)")
-//                .frame(width: geo.size.width * 0.9, height: 40)
-//                .background(Color.red)
-//        }
-//        .background(Color.green)
+        //        GeometryReader(alignment: .center) { geo in
+        //            Text("width: \(geo.size.width)")
+        //                .frame(width: geo.size.width * 0.9, height: 40)
+        //                .background(Color.red)
+        //        }
+        //        .background(Color.green)
     }
 }
 

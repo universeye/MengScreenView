@@ -44,6 +44,7 @@ struct GeoHorizontal: View {
                             Rectangle()
                                 .fill(self.colors[index % 7])
                                 .frame(height: 150)
+                                .overlay(Text("\(geo.frame(in: .global).midX)"))
                                 .rotation3DEffect(
                                     .degrees(-Double(geo.frame(in: .global).midX - fullView.size.width / 2) / 10),
                                     axis: (x: 0.0, y: 1.0, z: 0.0))
